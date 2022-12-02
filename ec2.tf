@@ -1,8 +1,8 @@
 # Terraform Configure setting block
 terraform {
   required_providers {
-    aws = {
-      source  = "hashicorp/aws"
+    azure = {
+      source  = "hashicorp/azure"
       
     }
   }
@@ -11,7 +11,7 @@ terraform {
 # Provider Block
 provider "aws" {
   profile = "default" 
-  region  = "us-cnetral"
+  region  = ""us-east"
 }
 
 #Resource Block
@@ -28,7 +28,7 @@ module "vpc" {
   
 
   # VPC Basic Details
-  name = "vpc-dev"
+  name = "vpc-test"
   cidr = "192.168.0.0/16"   
   azs                 = ["us-east-1a"]
   private_subnets     = ["192.168.1.0/24"]
